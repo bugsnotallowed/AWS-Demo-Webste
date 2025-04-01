@@ -7,18 +7,19 @@
         async function signup() {
             const username = document.getElementById('signup-username').value;
             const password = document.getElementById('signup-password').value;
-            const response = await fetch('http://localhost:5500/signup', {
+            const response = await fetch(`${API_URL}/signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
             });
             alert('Signup Successful');
         }
-        
+
+        const API_URL = 'http://54.234.8.215:5500';
         async function login() {
             const username = document.getElementById('login-username').value;
             const password = document.getElementById('login-password').value;
-            const response = await fetch('http://localhost:5500/login', {
+            const response = await fetch(`${API_URL}/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })

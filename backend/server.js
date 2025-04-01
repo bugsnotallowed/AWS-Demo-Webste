@@ -45,4 +45,4 @@ app.get('/download', (req, res) => {
   res.download(path.join(__dirname, 'uploads/sample.pdf'));
 });
 
-app.listen(5500, () => console.log('Server running on port 5500'));
+app.listen(5500,'0.0.0.0', () => console.log('Server running on port 5500'));
